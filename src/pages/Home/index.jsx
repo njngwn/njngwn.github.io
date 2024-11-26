@@ -18,20 +18,14 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 // 타이핑 애니메이션 수정
-const typing = keyframes`
-  0% { width: 0 }
-  50%, 100% { width: 100% }
+const typingAnimation = keyframes`
+  0%, 100% { width: 0 }
+  20%, 80% { width: 100% }
 `;
 
 // 커서 깜빡임 애니메이션
 const blink = keyframes`
   50% { border-color: transparent }
-`;
-
-// 텍스트 사라지는 애니메이션 추가
-const erasing = keyframes`
-  0% { width: 100% }
-  50%, 100% { width: 0 }
 `;
 
 const Container = styled.div`
@@ -56,9 +50,9 @@ const Title = styled.h1`
   overflow: hidden;
   white-space: nowrap;
   border-right: 3px solid #64ffda;
+  width: 0;
   animation: 
-    ${typing} 2s steps(14) infinite,
-    ${erasing} 2s steps(14) infinite 2s,
+    ${typingAnimation} 4s steps(14) infinite,
     ${blink} 0.7s step-end infinite;
 
   @media (max-width: 768px) {
