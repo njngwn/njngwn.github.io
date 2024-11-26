@@ -19,13 +19,15 @@ const GlobalStyle = createGlobalStyle`
 
 // 타이핑 애니메이션 수정
 const typingAnimation = keyframes`
-  0%, 100% { width: 0 }
-  20%, 80% { width: 100% }
+  0% { width: 0 }
+  30%, 60% { width: 16ch }
+  90%, 100% { width: 0 }
 `;
 
 // 커서 깜빡임 애니메이션
 const blink = keyframes`
-  50% { border-color: transparent }
+  from, to { border-right-color: #64ffda }
+  50% { border-right-color: transparent }
 `;
 
 const Container = styled.div`
@@ -42,18 +44,26 @@ const Container = styled.div`
 const TitleWrapper = styled.div`
   display: inline-block;
   margin-bottom: 1rem;
+  position: relative;
 `;
 
 const Title = styled.h1`
+  font-family: 'Fira Code', monospace;
   font-size: 3.5rem;
-  font-weight: 600;
+  font-weight: 500;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 3px solid #64ffda;
   width: 0;
+  padding: 0.2em 0;
+  line-height: 1;
+  border-right: 2px solid #64ffda;
   animation: 
-    ${typingAnimation} 4s steps(14) infinite,
-    ${blink} 0.7s step-end infinite;
+    ${typingAnimation} 8s steps(16) infinite,
+    ${blink} 1s steps(1) infinite;
+
+  &::after {
+    content: none;
+  }
 
   @media (max-width: 768px) {
     font-size: 2.5rem;
@@ -65,7 +75,9 @@ const Title = styled.h1`
 `;
 
 const Description = styled.p`
+  font-family: 'Fira Code', monospace;
   font-size: 1.5rem;
+  font-weight: 400;
   margin-bottom: 2rem;
   color: #8892b0;
 
