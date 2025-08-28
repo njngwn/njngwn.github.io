@@ -6,6 +6,9 @@ categories: [Programming Language, Ocaml]
 tags: [ocaml, fpv]
 ---
 
+> Feel free to leave a comment or contact me if you spot any errors or have feedback. I'm always open to learning! {: .prompt-tip } 
+
+
 ## How to declare type in Ocaml
 
 ```ocaml
