@@ -16,7 +16,7 @@ timezone: Europe/Berlin
 
 title: Jeongwon Na # the main title
 
-tagline: Computer Science Student # it will display as the subtitle
+tagline: TIL - Today I Learned # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   Today I Learned
