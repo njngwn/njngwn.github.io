@@ -8,7 +8,6 @@ tags: [ocaml, fpv]
 
 > Feel free to leave a comment or contact me if you spot any errors or have feedback. I'm always open to learning! {: .prompt-tip } 
 
-
 ## How to declare type in Ocaml
 
 ```ocaml
@@ -45,7 +44,7 @@ let combine v1 v2 v3 = string_of_vector3 (vector3_add v1 (vector3_max v2 v3))
 ```
 
 
-## declare list using type
+## Declare list using type
 ```ocaml
 type student = {
   first_name : string;
