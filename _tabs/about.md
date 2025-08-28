@@ -16,3 +16,6 @@ My goal is to solidify my knowledge through writing. By explaining a concept in 
 ## About Me
 
 Hello! I am an aspiring software engineer with a unique background that blends computer science with design and digital management. I am currently pursuing my Bachelor of Computer Science at the Technical University of Munich , building on the foundation I gained from my previous studies in Contents Design and Digital Convergence Management.
+
+Curious about the full story? You can find the details in [my CV 📄 ✨](/assets/docs/Jeongwon_Na_CV_2025.pdf). 
+
