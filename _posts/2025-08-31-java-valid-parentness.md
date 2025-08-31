@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[java]-valid-parentness"
+title: "[Java] Valid Parentness"
 date: 2025-08-31 13:35 +0200
 categories: [Data Structures and Algorithms , LeetCode]
 tags: [java, stack, string]
