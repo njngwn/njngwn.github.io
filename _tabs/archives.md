@@ -1,5 +1,5 @@
 ---
 layout: archives
-icon: far fa-calendar-alt
+icon: fas fa-calendar
 order: 5
 ---
