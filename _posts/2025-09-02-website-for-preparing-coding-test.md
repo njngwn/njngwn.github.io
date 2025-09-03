@@ -10,4 +10,9 @@ tags: [algorithm, leetcode]
 
 In this post, I scrapped some websites which seems helpful for preparing coding tests. The list will be updated whenever I find more useful websites. If you know useful websites which are not here, please share with me :)
 
+
 1. [Algo.Monster](https://algo.monster/)
+
+2. [NeedCode Roadmap](https://neetcode.io/roadmap)
+
+3. [systemdesign.io](https://systemdesign.io/)
