@@ -3,7 +3,7 @@ layout: post
 title: "[Java] Remove Duplicates from Sorted Array"
 date: 2025-09-03 16:32 +0200
 categories: [Data Structures and Algorithms , LeetCode-Top Interview 150]
-tags: [arrays, two-pointers, top-interview-150, easy]
+tags: [array, two-pointers, top-interview-150, easy]
 ---
 
 

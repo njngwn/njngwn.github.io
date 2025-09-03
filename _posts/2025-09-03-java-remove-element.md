@@ -3,7 +3,7 @@ layout: post
 title: "[Java] Remove Element"
 date: 2025-09-03 16:08 +0200
 categories: [Data Structures and Algorithms , LeetCode-Top Interview 150]
-tags: [arrays, two-pointers, top-interview-150, easy]
+tags: [array, two-pointers, top-interview-150, easy]
 ---
 
 > Feel free to leave a comment or contact me if you spot any errors or have feedback. I'm always open to learning!
