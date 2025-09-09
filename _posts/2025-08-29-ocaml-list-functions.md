@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Ocaml List Functions
+title: OCaml List Functions
 date: 2025-08-29 14:52 +0200
-categories: [Programming Language, Ocaml]
+categories: [Programming Language, OCaml]
 tags: [ocaml, fpv]
 ---
 

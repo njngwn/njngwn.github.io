@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Ocaml Datatypes Declaration
+title: OCaml Datatypes Declaration
 date: 2025-08-28 18:46 +0200
-categories: [Programming Language, Ocaml]
+categories: [Programming Language, OCaml]
 tags: [ocaml, fpv]
 ---
 

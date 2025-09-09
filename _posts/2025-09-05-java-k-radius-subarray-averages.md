@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[Java] K Radius Subarray Averages"
+title: "[Java] K-Radius Subarray Averages"
 date: 2025-09-05 13:11 +0200
-categories: [Data Structures and Algorithms, LeetCode-Top Interview]
+categories: [Data Structures and Algorithms, LeetCode-Top Interview 150]
 tags: [array, sliding-window, medium]
 ---
 

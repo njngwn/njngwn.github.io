@@ -13,5 +13,5 @@ tags: [nat, network, transport-layer, computer-science]
 {: .prompt-info }
 
 
-# NAT (Network Transport Layer)
+# NAT (Network Address Translation)
 
