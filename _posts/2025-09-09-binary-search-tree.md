@@ -21,6 +21,12 @@ tags: [data-structures, tree, binary-search-tree]
 [This tool](https://www.cs.usfca.edu/~galles/visualization/BST.html) show visualization of insert, delete, find algorithm of Binary Search Tree.
 
 
+## Leetcode Problems
+
+- [700. Search in a Binary Search Tree
+](https://leetcode.com/problems/search-in-a-binary-search-tree/)
+- [94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)
+
 ## References
 
 - [https://www.geeksforgeeks.org/dsa/introduction-to-binary-search-tree/](https://www.geeksforgeeks.org/dsa/introduction-to-binary-search-tree/)
