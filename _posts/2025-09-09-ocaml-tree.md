@@ -4,7 +4,6 @@ title: OCaml Tree
 date: 2025-09-09 11:53 +0200
 categories: [Programming Language, OCaml]
 tags: [ocaml, tree, binary-search-tree]
-password: fpv
 ---
 
 > Feel free to leave a comment or contact me if you spot any errors or have feedback. I'm always open to learning!
@@ -29,9 +28,9 @@ let inspect n = match n with Node (v, l, r) -> Some (v, l, r) | Empty -> None
 
 let t1 =
   Node
-    ( 8,
-      Node (1, Empty, Node (6, Empty, Empty)),
-      Node (12, Node (9, Empty, Empty), Node (42, Empty, Empty)) )
+    ( 9,
+      Node (2, Empty, Node (7, Empty, Empty)),
+      Node (15, Node (11, Empty, Empty), Node (60, Empty, Empty)) )
 ```
 
 
