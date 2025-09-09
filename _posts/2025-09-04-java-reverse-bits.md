@@ -2,7 +2,7 @@
 layout: post
 title: "[Java] Reverse Bits"
 date: 2025-09-04 15:10 +0200
-categories: [Data Structures and Algorithms , LeetCode-Top Interview 150]
+categories: [Data Structures and Algorithms, LeetCode-Top Interview 150]
 tags: [divide-and-conquer, bit-manipulation, top-interview-150, easy]
 ---
 

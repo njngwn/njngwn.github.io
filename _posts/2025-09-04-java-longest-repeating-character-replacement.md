@@ -46,7 +46,7 @@ There may exists other ways to achieve this answer too.
 - 0 <= k <= s.length
 
 
-## My Approach
+## My First Approach
 
 At first, I tried to use sliding window. I could pass the two examples above, however, I didn't consider the case "ABBB" with k = 1. This case should return 4 but my codes return 3. 
 
@@ -80,3 +80,15 @@ class Solution {
     }
 }
 ```
+
+
+## My First Approach
+
+
+Let's set two pointers, one is start (marked as 's') and the other is end (marked with 'e'). The start pointer starts with index 0 and the end pointer starts with index 1.
+
+| s          | k  | Max
+| -----------|----|
+| [A]ABABBA  | 1  |
+| 
+|

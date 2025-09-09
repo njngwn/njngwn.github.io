@@ -2,7 +2,7 @@
 layout: post
 title: "[Java] Summary Ranges"
 date: 2025-09-04 14:39 +0200
-categories: [Data Structures and Algorithms , LeetCode-Top Interview 150]
+categories: [Data Structures and Algorithms, LeetCode-Top Interview 150]
 tags: [array, top-interview-150, easy]
 ---
 
