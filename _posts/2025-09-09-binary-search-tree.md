@@ -18,7 +18,9 @@ tags: [data-structures, tree, binary-search-tree]
 
 ## Visualization Tool
 
-[This tool](https://www.cs.usfca.edu/~galles/visualization/BST.html) show visualization of insert, delete, find algorithm of Binary Search Tree.
+[This tool](https://www.cs.usfca.edu/~galles/visualization/BST.html) shows visualization of insert, delete, find algorithm of Binary Search Tree.
+
+Also, [this website](https://algorithm-visualizer.org/branch-and-bound/binary-search-tree) shows how we can insert or search nodes in the binary tree.
 
 
 ## Leetcode Problems
