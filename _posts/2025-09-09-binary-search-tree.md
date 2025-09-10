@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Binary Search Tree
+title: Binary Search Tree (BST)
 date: 2025-09-09 12:14 +0200
 categories: [Data Structures and Algorithms, Data Structures]
 tags: [data-structures, tree, binary-search-tree]
@@ -11,7 +11,7 @@ tags: [data-structures, tree, binary-search-tree]
 {: .prompt-tip }
 
 
-# Binary Search Tree
+# Binary Search Tree (BST)
 
 ![Binary-Search-Tree-Image](/assets/img/data-structures/Binary-Search-Tree.webp) _Source: Geeks for Geeks_
 
