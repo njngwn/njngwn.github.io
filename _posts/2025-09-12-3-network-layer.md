@@ -10,7 +10,7 @@ tags: [nat, network, network-layer, computer-science]
 {: .prompt-info }
 
 
-# Network Layer (Vermittlungsschicht)
+# Network Layer (Vermittlungsschicht, 네트워크 계층)
 
 ## Vermittlungsarten
 

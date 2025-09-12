@@ -6,4 +6,4 @@ categories: [Comptuer Science, Network]
 tags: [nat, network, data-link-layer, computer-science]
 ---
 
-# Data Link Layer
+# Data Link Layer (Sicherungsschicht, 데이터 링크 계층)

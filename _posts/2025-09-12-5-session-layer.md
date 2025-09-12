@@ -6,4 +6,4 @@ categories: [Comptuer Science, Network]
 tags: [nat, network, session-layer, computer-science]
 ---
 
-# Session Layer
+# Session Layer (Sitzungsschicht, 세션 계층)

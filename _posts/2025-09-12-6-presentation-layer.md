@@ -6,4 +6,4 @@ categories: [Comptuer Science, Network]
 tags: [nat, network, presentation-layer, computer-science]
 ---
 
-# Presentation Layer
+# Presentation Layer (Darstellungsschicht, 표현 계층)

@@ -6,4 +6,4 @@ categories: [Comptuer Science, Network]
 tags: [nat, network, physical-layer, computer-science]
 ---
 
-# Physical Layer
+# Physical Layer (Physikalische Schicht, 물리 계층)
