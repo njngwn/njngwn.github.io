@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Welcome to My Blog!"
+title: "✨Welcome to My Blog!✨"
 date: 2025-09-03 10:44 +0200
 pin: true
 ---
