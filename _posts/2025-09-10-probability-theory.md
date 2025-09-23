@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Statistical Measure Summary (수식 깨짐 수정)
+title: Statistical Measure Summary
 date: 2025-09-10 15:43 +0200
 categories: [Comptuer Science, Probability Theory]
 tags: [math, probability-theory, computer-science]
+math: true
 ---
 
 # Statistical Measure Summary
