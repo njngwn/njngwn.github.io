@@ -29,6 +29,8 @@ tags: [nat, network, network-layer, computer-science]
 
 ### IPv6 (Internet Protocol version 6)
 
+![ipv6-note](/assets/img/network/ipv6.png)
+
 #### IPv6-Adressen zur besonderen Verwendung
 
 | IPv6 접두사 | 주소 유형 | 주요 특징 및 예시 | 라우팅 여부 |
