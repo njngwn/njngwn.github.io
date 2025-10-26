@@ -6,7 +6,7 @@ categories: [Data Structures and Algorithms, Data Structures]
 tags: [data-structures, union-find]
 ---
 
-# Union Find
+# Union Find (Disjoint Set)
 
 
 두 노드가 같은 집합에 속하는지 판별하는 알고리즘. 반대로 서로 연결되지 않은 노드를 판별할 수도 있음.
@@ -21,7 +21,134 @@ tags: [data-structures, union-find]
 {% include embed/youtube.html id='92UpvDXc8fs' %}
 
 
+## Code
+
+These codes are from [geeksforgeeks](https://www.geeksforgeeks.org/dsa/introduction-to-disjoint-set-data-structure-or-union-find-algorithm/)
+
+### Java
+
+```java
+import java.util.Arrays;
+
+public class UnionFind {
+    private int[] parent;
+
+    public UnionFind(int size) {
+      
+        // Initialize the parent array with each 
+        // element as its own representative
+        parent = new int[size];
+        for (int i = 0; i < size; i++) {
+            parent[i] = i;
+        }
+    }
+
+    // Find the representative (root) of the 
+    // set that includes element i
+    public int find(int i) {
+      
+        // if i itself is root or representative
+        if (parent[i] == i) {
+            return i;
+        }
+      
+        // Else recursively find the representative
+        // of the parent 
+        return find(parent[i]);
+    }
+
+    // Unite (merge) the set that includes element 
+    // i and the set that includes element j
+    public void union(int i, int j) {
+      
+        // Representative of set containing i
+        int irep = find(i);
+
+        // Representative of set containing j
+        int jrep = find(j);
+
+        // Make the representative of i's set be 
+        // the representative of j's set
+        parent[irep] = jrep;
+    }
+
+    public static void main(String[] args) {
+        int size = 5;
+        UnionFind uf = new UnionFind(size);
+        uf.union(1, 2);
+        uf.union(3, 4);
+        boolean inSameSet = uf.find(1) == uf.find(2);
+        System.out.println("Are 1 and 2 in the same set? " + inSameSet);
+    }
+}
+```
+
+### C++
+
+```c++
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class UnionFind {
+    vector<int> parent;
+public:
+    UnionFind(int size) {
+      
+        parent.resize(size);
+      
+        // Initialize the parent array with each 
+        // element as its own representative
+        for (int i = 0; i < size; i++) {
+            parent[i] = i;
+        }
+    }
+
+    // Find the representative (root) of the
+    // set that includes element i
+    int find(int i) {
+      
+        // If i itself is root or representative
+        if (parent[i] == i) {
+            return i;
+        }
+      
+        // Else recursively find the representative 
+        // of the parent
+        return find(parent[i]);
+    }
+
+    // Unite (merge) the set that includes element 
+    // i and the set that includes element j
+    void unite(int i, int j) {
+      
+        // Representative of set containing i
+        int irep = find(i);
+      
+        // Representative of set containing j
+        int jrep = find(j);
+       
+        // Make the representative of i's set
+        // be the representative of j's set
+        parent[irep] = jrep;
+    }
+};
+
+int main() {
+    int size = 5;
+    UnionFind uf(size);
+    uf.unite(1, 2);
+    uf.unite(3, 4);
+    bool inSameSet = (uf.find(1) == uf.find(2));
+    cout << "Are 1 and 2 in the same set? " 
+         << (inSameSet ? "Yes" : "No") << endl;
+    return 0;
+}
+```
+
+
 ## References
 
 * [https://cp-algorithms.com/data_structures/disjoint_set_union.html](https://cp-algorithms.com/data_structures/disjoint_set_union.html)
 * [https://velog.io/@jxlhe46/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%9C%A0%EB%8B%88%EC%98%A8-%ED%8C%8C%EC%9D%B8%EB%93%9C-Union-Find](https://velog.io/@jxlhe46/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%9C%A0%EB%8B%88%EC%98%A8-%ED%8C%8C%EC%9D%B8%EB%93%9C-Union-Find)
+* [https://www.geeksforgeeks.org/dsa/introduction-to-disjoint-set-data-structure-or-union-find-algorithm/](https://www.geeksforgeeks.org/dsa/introduction-to-disjoint-set-data-structure-or-union-find-algorithm/)
