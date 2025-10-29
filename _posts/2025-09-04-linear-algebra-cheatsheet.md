@@ -2,7 +2,7 @@
 layout: post
 title: Linear Algebra Cheatsheet
 date: 2025-09-04 15:20 +0200
-categories: [Comptuer Science, Linear Algebra]
+categories: [Mathematics for Comptuer Science, Linear Algebra]
 tags: [math, linear-algebra, computer-science]
 ---
 
