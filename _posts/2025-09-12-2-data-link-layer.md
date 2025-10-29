@@ -2,7 +2,7 @@
 layout: post
 title: 2. Data Link Layer (Sicherungsschicht)
 date: 2025-09-12 15:47 +0200
-categories: [Comptuer Science, Network]
+categories: [Computer Science, Network]
 tags: [nat, network, data-link-layer, computer-science]
 ---
 

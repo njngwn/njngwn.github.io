@@ -2,7 +2,7 @@
 layout: post
 title: 7. Application Layer (Anwendungsschicht)
 date: 2025-09-12 15:48 +0200
-categories: [Comptuer Science, Network]
+categories: [Computer Science, Network]
 tags: [nat, network, application-layer, computer-science]
 ---
 
