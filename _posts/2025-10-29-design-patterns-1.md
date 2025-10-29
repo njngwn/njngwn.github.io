@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Design Patterns 1
+title: Design Patterns
 date: 2025-10-29 11:57 +0100
 categories: [Comptuer Science, Software Engineering]
 tags: [software-engineering, computer-science]
@@ -10,7 +10,24 @@ tags: [software-engineering, computer-science]
 
 ## Design Pattern Overview
 
+## Structural Pattern
 
+### Adapter Pattern
+
+### Proxy Pattern
+
+### Bridge Pattern
+
+### Facade Pattern
+
+### Composite Pattern
+
+
+## Behavioral Pattern
+
+### Strategy Pattern
+
+### Observer Pattern
 
 ## Design Pattern Quick Reference
 
@@ -22,3 +39,8 @@ tags: [software-engineering, computer-science]
     height="600px" 
     style="border: none;">
 </iframe>
+
+
+## References
+
+* [https://refactoring.guru/design-patterns](https://refactoring.guru/design-patterns)
