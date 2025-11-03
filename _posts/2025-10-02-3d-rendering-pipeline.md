@@ -2,7 +2,7 @@
 layout: post
 title: 3D Rendering Pipeline
 date: 2025-10-02 22:49 +0200
-categories: [Comptuer Science, Computer Graphics]
+categories: [Computer Science, Computer Graphics]
 tags: [computer-science, computer-graphics, 3d-rendering]
 ---
 

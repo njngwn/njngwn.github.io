@@ -2,7 +2,7 @@
 layout: post
 title: Diamond-Square-Algorithm
 date: 2025-10-07 22:40 +0200
-categories: [Comptuer Science, Computer Graphics]
+categories: [Computer Science, Computer Graphics]
 tags: [computer-science, computer-graphics, 3d-rendering]
 ---
 

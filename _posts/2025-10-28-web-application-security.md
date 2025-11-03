@@ -2,7 +2,7 @@
 layout: post
 title: Web Application Security
 date: 2025-10-28 16:20 +0100
-categories: [Comptuer Science, IT Security]
+categories: [Computer Science, IT Security]
 tags: [it-security, computer-science]
 mermaid: true
 ---

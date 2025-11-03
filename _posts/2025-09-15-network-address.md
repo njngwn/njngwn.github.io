@@ -2,7 +2,7 @@
 layout: post
 title: Network Address
 date: 2025-09-15 11:02 +0200
-categories: [Comptuer Science, Network]
+categories: [Computer Science, Network]
 tags: [network, computer-science]
 ---
 

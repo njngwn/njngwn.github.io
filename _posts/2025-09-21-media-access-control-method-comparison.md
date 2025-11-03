@@ -2,7 +2,7 @@
 layout: post
 title: Media Access Control Method Comparison
 date: 2025-09-21 20:26 +0200
-categories: [Comptuer Science, Network]
+categories: [Computer Science, Network]
 tags: [network, computer-science]
 ---
 
