@@ -17,3 +17,4 @@ mermaid: true
 
 * https://devscb.tistory.com/123#
 * https://www.wallarm.com/what/what-is-cross-site-request-forgery
+* https://consideratecode.com/2017/08/31/csrf/

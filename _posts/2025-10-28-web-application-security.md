@@ -101,3 +101,4 @@ immer im Server!
 * https://studysteadily.tistory.com/9
 * https://www.wallarm.com/what/what-is-the-difference-between-csrf-and-xss
 * https://www.jit.io/resources/app-security/xss-vs-csrf
+* https://consideratecode.com/2017/08/31/csrf/
