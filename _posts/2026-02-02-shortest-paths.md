@@ -7,18 +7,18 @@ tags: [algorithms, graph, shortest-path, dijkstra, bellman-ford, floyd-warshall,
 math: true
 ---
 
-## 3. Shortest Paths (최단 경로)
+# Shortest Paths (최단 경로)
 
 ### 3.1 Dijkstra's Algorithm
 
 - **Scope:** Single Source Shortest Path (SSSP) for graphs with **non-negative weights**. / **음이 아닌 가중치** 그래프의 단일 출발지 최단 경로 (SSSP).
 - **Idea:** Use priority queue, always process vertex with minimum distance first. / 우선순위 큐 사용, 항상 최소 거리 정점을 먼저 처리.
 - **Algorithm:**
-  1. Initialize distances: $dist[s] = 0$, others $\infty$. / 거리 초기화: $dist[s] = 0$, 나머지 $\infty$.
+  1. Initialize distances: \$$dist[s] = 0$$, others $$\infty$$. / 거리 초기화: \$$dist[s] = 0$$, 나머지 $$\infty$$.
   2. Use priority queue (min-heap) ordered by distance. / 거리 기준 최소 힙 사용.
   3. Extract min, relax neighbors (update if shorter path found). / 최소 추출, 이웃 완화 (더 짧은 경로 발견 시 업데이트).
   4. Repeat until queue empty. / 큐가 빌 때까지 반복.
-- **Time Complexity:** $\mathcal{O}(|E| + |V| \log |V|)$ with Fibonacci heap. / 피보나치 힙 사용 시 $\mathcal{O}(|E| + |V| \log |V|)$.
+- **Time Complexity:** $$\mathcal{O}(|E| + |V| \log |V|)$$ with Fibonacci heap. / 피보나치 힙 사용 시 $$\mathcal{O}(|E| + |V| \log |V|)$$.
 - **Why non-negative only? / 음이 아닌 가중치만 가능한 이유?** Once a vertex is processed, its distance is final. Negative edges could create shorter paths later. / 정점 처리 후 거리가 확정됩니다. 음수 간선은 나중에 더 짧은 경로를 만들 수 있습니다.
 
 **Visualization:**
@@ -102,19 +102,19 @@ vector<long long> dijkstra(int start, const vector<vector<pair<int, int>>>& grap
 **Complexity Analysis:**
 
 **Dijkstra:**
-- Binary heap: $\mathcal{O}(|E| \log |V|)$ - $|V|$ extract-min + $|E|$ decrease-key
-- Fibonacci heap: $\mathcal{O}(|E| + |V| \log |V|)$ - amortized $\mathcal{O}(1)$ decrease-key
+- Binary heap: $$\mathcal{O}(|E| \log |V|)$$ - \$$|V|$$ extract-min + \$$|E|$$ decrease-key
+- Fibonacci heap: $$\mathcal{O}(|E| + |V| \log |V|)$$ - amortized $$\mathcal{O}(1)$$ decrease-key
 - **Why not negative weights?** Once vertex is processed, distance is final. Negative edge could create shorter path later. / 정점이 처리되면 거리가 확정. 음수 간선이 나중에 더 짧은 경로를 만들 수 있음.
 
 **Bellman-Ford:**
-- $|V|-1$ iterations × $|E|$ edges = $\mathcal{O}(|V| \cdot |E|)$
-- **Why $|V|-1$?** Shortest path has at most $|V|-1$ edges. / 최단 경로는 최대 $|V|-1$개 간선.
+- \$$(|V|-1)$$ iterations × \$$|E|$$ edges = $$\mathcal{O}(|V| \cdot |E|)$$
+- **Why \$$(|V|-1)$$?** Shortest path has at most \$$(|V|-1)$$ edges. / 최단 경로는 최대 \$$(|V|-1)$$개 간선.
 - **Negative cycle detection:** One more iteration. If distances improve, cycle exists. / 한 번 더 반복. 거리가 개선되면 사이클 존재.
 
 **Floyd-Warshall:**
-- Three nested loops: $|V| \times |V| \times |V| = \mathcal{O}(|V|^3)$
-- **Space:** $|V| \times |V|$ distance matrix
-- **When to use:** Need all pairs, small $|V|$ (typically $|V| \leq 500$). / 모든 쌍 필요, 작은 $|V|$ (보통 $|V| \leq 500$).
+- Three nested loops: \$$|V| \times |V| \times |V| = \mathcal{O}(|V|^3)$$
+- **Space:** \$$|V| \times |V|$$ distance matrix
+- **When to use:** Need all pairs, small \$$|V|$$ (typically \$$|V| \leq 500$$). / 모든 쌍 필요, 작은 \$$|V|$$ (보통 \$$|V| \leq 500$$).
 
 **Algorithm Selection Guide:**
 
@@ -148,14 +148,14 @@ Need shortest paths?
 ### 3.2 Bellman-Ford Algorithm
 
 - **Scope:** SSSP for graphs with **negative weights** (but no negative cycles). / **음수 가중치** 그래프의 SSSP (음수 사이클 없음).
-- **Idea:** Relax all edges $|V|-1$ times. / 모든 간선을 $|V|-1$번 완화.
+- **Idea:** Relax all edges $(|V|-1)$ times. / 모든 간선을 $(|V|-1)$번 완화.
 - **Algorithm:**
-  1. Initialize distances: $dist[s] = 0$, others $\infty$. / 거리 초기화: $dist[s] = 0$, 나머지 $\infty$.
-  2. For $i = 1$ to $|V|-1$: / $i = 1$부터 $|V|-1$까지:
-     - For each edge $(u,v)$ with weight $w$: / 가중치 $w$인 각 간선 $(u,v)$에 대해:
-       - If $dist[u] + w < dist[v]$, update $dist[v]$. / $dist[u] + w < dist[v]$이면 $dist[v]$ 업데이트.
+  1. Initialize distances: \$$dist[s] = 0$$, others $$\infty$$. / 거리 초기화: \$$dist[s] = 0$$, 나머지 $$\infty$$.
+  2. For \$$i = 1$$ to \$$(|V|-1)$$: / \$$i = 1$$부터 \$$(|V|-1)$$까지:
+     - For each edge \$$(u,v)$$ with weight \$$w$$: / 가중치 \$$w$$인 각 간선 \$$(u,v)$$에 대해:
+       - If \$$dist[u] + w < dist[v]$$, update \$$dist[v]$$. / \$$dist[u] + w < dist[v]$$이면 \$$dist[v]$$ 업데이트.
   3. Check for negative cycles: One more iteration. If any distance can still be improved, negative cycle exists. / 음수 사이클 확인: 한 번 더 반복. 거리가 개선되면 음수 사이클 존재.
-- **Time Complexity:** $\mathcal{O}(|V| \cdot |E|)$. / $\mathcal{O}(|V| \cdot |E|)$.
+- **Time Complexity:** $$\mathcal{O}(|V| \cdot |E|)$$. / $$\mathcal{O}(|V| \cdot |E|)$$.
 - **Optimization:** Queue-based version (SPFA) - only process vertices whose distance changed. / 큐 기반 버전 (SPFA) - 거리가 변경된 정점만 처리.
 
 **Visualization:**
@@ -215,7 +215,7 @@ vector<long long> bellmanFord(int start, const vector<Edge>& edges, int n) {
 ```
 
 **Common Mistakes:**
-- 반복 횟수: 정확히 $|V|-1$번 반복해야 함 / Iteration count: Must iterate exactly $|V|-1$ times
+- 반복 횟수: 정확히 $(|V|-1)$번 반복해야 함 / Iteration count: Must iterate exactly $(|V|-1)$ times
 - 음수 사이클 탐지: 한 번 더 반복하여 거리 개선 확인 / Negative cycle detection: One more iteration to check distance improvement
 - INF 체크: `dist[u] != INF` 확인 후 완화 (INF에서 시작하는 경로는 무시) / INF check: Check `dist[u] != INF` before relaxing (ignore paths starting from INF)
 
@@ -234,7 +234,7 @@ vector<long long> bellmanFord(int start, const vector<Edge>& edges, int n) {
 - **Time Complexity:** $\mathcal{O}(|V| + |E|)$ with topological sort. / 위상 정렬 사용 시 $\mathcal{O}(|V| + |E|)$.
 
 **Possible Questions:**
-- Why $|V|-1$ iterations? (EN: Shortest path has at most $|V|-1$ edges. KR: 최단 경로는 최대 $|V|-1$개의 간선을 가집니다.)
+- Why $(|V|-1)$ iterations? (EN: Shortest path has at most $(|V|-1)$ edges. KR: 최단 경로는 최대 $(|V|-1)$개의 간선을 가집니다.)
 - How do you detect negative cycles? (EN: Run one more iteration. If distances can still be improved, negative cycle exists. KR: 한 번 더 반복 실행. 거리가 개선되면 음수 사이클 존재.)
 - What is SPFA? (EN: Queue-based Bellman-Ford that only processes vertices with updated distances. KR: 거리가 업데이트된 정점만 처리하는 큐 기반 Bellman-Ford.)
 

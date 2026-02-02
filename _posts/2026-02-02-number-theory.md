@@ -7,7 +7,7 @@ tags: [algorithms, number-theory, gcd, euclidean, crt, modular-inverse, sieve]
 math: true
 ---
 
-## 8. Number Theory (정수론)
+# Number Theory (정수론)
 
 ### 8.1 GCD & LCM
 

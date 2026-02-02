@@ -7,7 +7,7 @@ tags: [algorithms, graph, dfs, bfs, topological-sort, mst, kruskal, prim]
 math: true
 ---
 
-## 2. Graph Algorithms (그래프 알고리즘)
+# Graph Algorithms (그래프 알고리즘)
 
 ### 2.1 Graph Representations
 

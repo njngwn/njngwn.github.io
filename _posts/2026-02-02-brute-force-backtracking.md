@@ -7,7 +7,7 @@ tags: [algorithms, brute-force, backtracking, branch-and-bound, meet-in-the-midd
 math: true
 ---
 
-## 5. Brute Force & Backtracking (브루트 포스 & 백트래킹)
+# Brute Force & Backtracking (브루트 포스 & 백트래킹)
 
 ### 5.1 Brute Force
 

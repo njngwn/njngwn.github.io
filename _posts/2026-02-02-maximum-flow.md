@@ -7,7 +7,7 @@ tags: [algorithms, graph, max-flow, min-cut, ford-fulkerson, edmonds-karp, dinic
 math: true
 ---
 
-## 4. Maximum Flow (최대 유량)
+# Maximum Flow (최대 유량)
 
 ### 4.1 Flow Network
 

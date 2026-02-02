@@ -7,7 +7,7 @@ tags: [algorithms, dynamic-programming, dp, knapsack, lis, memoization]
 math: true
 ---
 
-## 7. Dynamic Programming (동적 계획법)
+# Dynamic Programming (동적 계획법)
 
 ### 7.1 Basic Concept
 

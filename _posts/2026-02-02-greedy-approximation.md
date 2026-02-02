@@ -7,7 +7,7 @@ tags: [algorithms, greedy, approximation, interval-scheduling, change-making]
 math: true
 ---
 
-## 6. Greedy & Approximation (탐욕법 & 근사 알고리즘)
+# Greedy & Approximation (탐욕법 & 근사 알고리즘)
 
 ### 6.1 Greedy Algorithms
 

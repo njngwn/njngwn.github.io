@@ -7,7 +7,7 @@ tags: [algorithms, geometry, projective-geometry, homogeneous-coordinates, cross
 math: true
 ---
 
-## 11. Projective Geometry (사영 기하학)
+# Projective Geometry (사영 기하학)
 
 ### 11.1 Projective Plane
 

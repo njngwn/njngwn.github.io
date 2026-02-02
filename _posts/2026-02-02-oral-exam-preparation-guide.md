@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 'Oral Exam Preparation Guide (구술 시험 대비 가이드)'
+title: 'Oral Exam Preparation Guide'
 date: 2026-02-02 00:00 +0100
 categories: [Data Structures and Algorithms, Algorithms]
 tags: [algorithms, exam-preparation, problem-solving, complexity-analysis]
 math: true
 ---
 
-# Oral Exam Preparation Guide (구술 시험 대비 가이드)
+# Oral Exam Preparation
 
 ## 1. Problem-Solving Strategies (문제 해결 전략)
 
@@ -174,8 +174,6 @@ After:  1
 1  2  3  4  5  6  7  8
 ```
 
-### DP Tables
-
 **Knapsack DP Table:**
 ```
 Items: (weight, value)
@@ -272,7 +270,7 @@ Residual: s→1 (cap=7), 1→s (cap=3)
 
 ### Shortest Paths
 - [ ] Why Dijkstra doesn't work with negative weights (proof)
-- [ ] Bellman-Ford $|V|-1$ iterations reason
+- [ ] Bellman-Ford $(|V|-1)$ iterations reason
 - [ ] Negative cycle detection
 - [ ] Floyd-Warshall DP structure and loop order
 - [ ] Longest path in DAG
@@ -546,13 +544,13 @@ Dijkstra assumes that once a vertex is processed (extracted from priority queue)
 **Q3.2: Bellman-Ford 알고리즘의 동작 원리와 음수 사이클 탐지는?**
 
 **Answer:**
-- **Algorithm:** Relax all edges |V|-1 times. After |V|-1 iterations, shortest paths are found (if no negative cycles).
-- **Negative Cycle Detection:** Run one more iteration. If any distance can still be improved, negative cycle exists. Reason: Shortest path has at most |V|-1 edges. If |V| iterations can still improve, there's a cycle with negative total weight.
+- **Algorithm:** Relax all edges $(|V|-1)$ times. After $(|V|-1)$ iterations, shortest paths are found (if no negative cycles).
+- **Negative Cycle Detection:** Run one more iteration. If any distance can still be improved, negative cycle exists. Reason: Shortest path has at most $(|V|-1)$ edges. If $|V|$ iterations can still improve, there's a cycle with negative total weight.
 
 **Q3.3: Floyd-Warshall의 시간 복잡도와 왜 O(V³)인가?**
 
 **Answer:**
-Three nested loops: for each intermediate vertex k, for each source i, for each destination j. Each iteration does constant work (one comparison and assignment). Total: V × V × V = V³ operations.
+Three nested loops: for each intermediate vertex $k$, for each source $i$, for each destination $j$. Each iteration does constant work (one comparison and assignment). Total: $|V| \times |V| \times |V| = |V|^3$ operations.
 
 **Important:** Loop order must be k, i, j. Changing order can give incorrect results.
 
@@ -782,6 +780,4 @@ Instead of trying all $2^n$ possibilities:
 **Example:** Subset sum with n=40: $2^{40} \approx 10^{12}$ (too slow) → $2^{20} \approx 10^6$ (feasible)
 
 ---
-
-**Good luck with your oral exam!** 화이팅!
 

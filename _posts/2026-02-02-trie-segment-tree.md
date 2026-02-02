@@ -7,7 +7,7 @@ tags: [data-structures, trie, segment-tree, lazy-propagation, range-query]
 math: true
 ---
 
-## 10. Trie & Segment Tree (트라이 & 세그먼트 트리)
+# Trie & Segment Tree (트라이 & 세그먼트 트리)
 
 ### 10.1 Trie
 
