@@ -99,6 +99,7 @@ Check: 7 × 15 = 105 ≡ 1 (mod 26) ✓
 | **Fast Exponentiation** | $x^n \bmod m$ | $\mathcal{O}(\log n)$ | $\mathcal{O}(1)$ | Binary representation / 이진 표현 |
 | **Sieve of Eratosthenes** | Primes ≤ n / n 이하 소수 | $\mathcal{O}(n \log \log n)$ | $\mathcal{O}(n)$ | Mark multiples starting from $i^2$ / $i^2$부터 배수 표시 |
 | **CRT** | System of congruences / 합동식 시스템 | $\mathcal{O}(k \log \max(n_i))$ | $\mathcal{O}(k)$ | Extended Euclidean for each modulus / 각 모듈러에 확장 유클리드 |
+| **Karatsuba** | Big integer multiplication / 큰 정수 곱셈 | $\mathcal{O}(n^{1.585})$ | $\mathcal{O}(n)$ | Split and reduce multiplications / 분할하여 곱셈 수 감소 |
 
 **Possible Questions:**
 - How do you find modular inverse? (EN: Use extended Euclidean to solve ax + my = 1, then x mod m is the inverse. KR: 확장 유클리드로 ax + my = 1 해결, x mod m이 역원.)
@@ -147,7 +148,61 @@ Check:
 
 ---
 
-### 8.4 Fast Exponentiation
+### 8.4 Big Integers
+
+- **Motivation / 동기:** Primitive data types have limits. / 기본 데이터 타입에는 한계가 있습니다.
+  - C++: `unsigned long long` ≈ $1.84 \times 10^{19}$ ($2^{64}-1$)
+  - Rust: `u128` ≈ $3.40 \times 10^{38}$ ($2^{128}-1$)
+- **Representation / 표현:** Base $b$ system with digits $\Sigma_b = \{0,1,...,b-1\}$. / 자릿수 $\Sigma_b = \{0,1,...,b-1\}$를 사용하는 $b$진법 시스템.
+- **Language Support / 언어 지원:**
+  - Python: Built-in long arithmetic
+  - Java: `BigInteger` class
+  - Julia: `BigInt` type
+  - C++: Not in standard library (use external libraries)
+  - Rust: `num_bigint` crate
+
+**Operations / 연산:**
+- **Addition / 덧셈:** $\mathcal{O}(n)$ where $n$ is number of digits. / 자릿수 $n$에 대해 $\mathcal{O}(n)$.
+- **Multiplication / 곱셈:**
+  - Grid Multiplication: $\mathcal{O}(n^2)$
+  - Karatsuba Algorithm: $\mathcal{O}(n^{\log_2 3}) \approx \mathcal{O}(n^{1.585})$
+
+**Karatsuba Algorithm / 카라추바 알고리즘:**
+- **Idea:** Split numbers $x, y$ into halves: $x = x_0 + x_1 b^k$, $y = y_0 + y_1 b^k$
+- **Naive:** $(x_0 + x_1 b^k)(y_0 + y_1 b^k) = x_0 y_0 + (x_1 y_0 + x_0 y_1)b^k + x_1 y_1 b^{2k}$ (4 multiplications)
+- **Optimization:** Compute $(x_1 y_0 + x_0 y_1)$ as $(x_0 + x_1)(y_0 + y_1) - x_0 y_0 - x_1 y_1$ (3 multiplications)
+- **Complexity:** Reduces from $\mathcal{O}(n^2)$ to $\mathcal{O}(n^{1.585})$
+
+**Example / 예시:**
+```
+Karatsuba: Multiply 1234 × 5678
+
+Split: x = 12×100 + 34, y = 56×100 + 78
+
+Compute:
+  z0 = 34 × 78 = 2652
+  z2 = 12 × 56 = 672
+  z1 = (12+34)(56+78) - z0 - z2 = 46×134 - 2652 - 672 = 6164 - 3324 = 2840
+
+Result: z0 + z1×100 + z2×10000 = 2652 + 2840×100 + 672×10000 = 7006652
+```
+
+---
+
+### 8.5 Rational Numbers
+
+- **Motivation / 동기:** Floating point causes loss of significance and rounding issues. / 부동소수점은 유효숫자 손실과 반올림 문제를 일으킵니다.
+- **Representation / 표현:** Store as $\frac{a}{b}$ where $gcd(a,b) = 1$ (simplified). / $gcd(a,b) = 1$인 $\frac{a}{b}$로 저장 (약분된 형태).
+- **Operations / 연산:**
+  - Sum: $\frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}$
+  - Difference: $\frac{a}{b} - \frac{c}{d} = \frac{ad - bc}{bd}$
+  - Product: $\frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}$
+  - Quotient: $\frac{a}{b} / \frac{c}{d} = \frac{ad}{bc}$ (if $c \neq 0$)
+- **Note:** Always simplify using $gcd(a,b)$ after operations. / 연산 후 항상 $gcd(a,b)$로 약분.
+
+---
+
+### 8.6 Fast Exponentiation
 
 **Binary Exponentiation / 이진 거듭제곱:**
 - Compute $x^n$ in $\mathcal{O}(\log n)$ multiplications. / $\mathcal{O}(\log n)$ 곱셈으로 $x^n$ 계산.
@@ -177,7 +232,7 @@ Only 5 multiplications instead of 12!
 
 ---
 
-### 8.5 Sieve of Eratosthenes
+### 8.7 Sieve of Eratosthenes
 
 - **Purpose / 목적:** Find all primes $\le n$. / $n$ 이하의 모든 소수 찾기.
 - **Algorithm / 알고리즘:**
