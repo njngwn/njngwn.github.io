@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Binary Tree & Binary Search Tree (이진 트리 & 이진 탐색 트리)'
-date: 2026-02-01 00:00 +0100
+date: 2025-09-09 12:14 +0200
 categories: [Data Structures and Algorithms, Data Structures]
 tags: [data-structures, tree, binary-tree, binary-search-tree, bst]
 math: true

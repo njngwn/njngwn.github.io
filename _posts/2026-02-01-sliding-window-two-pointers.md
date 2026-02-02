@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Sliding Window & Two Pointers (슬라이딩 윈도우 & 투 포인터)'
-date: 2026-02-01 00:00 +0100
+date: 2025-09-04 21:34 +0200
 categories: [Data Structures and Algorithms, Algorithms]
 tags: [algorithms, sliding-window, two-pointers, array]
 math: true
