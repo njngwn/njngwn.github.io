@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Maximum Flow (최대 유량)'
+title: 'Maximum Flow'
 date: 2026-02-02 00:00 +0100
 categories: [Data Structures and Algorithms, Algorithms]
 tags: [algorithms, graph, max-flow, min-cut, ford-fulkerson, edmonds-karp, dinic, bipartite-matching]
@@ -135,7 +135,7 @@ Min Cut: S = {s, 1, 2}, T = {3, t}
 
 **When to Use / 사용 시기:**
 - **Ford-Fulkerson:** Only for very small capacities or educational purposes. / 매우 작은 용량이거나 교육 목적.
-- **Edmonds-Karp:** Simple to implement, good for small-medium graphs. / 구현이 간단, 중소 그래프에 좋음.
+- **Edmonds-Karp:** Simple to implement, good for small-medium graphs.
 - **Dinic:** Best choice for most problems, especially unit networks. / 대부분의 문제에 최적, 특히 단위 네트워크.
 
 **Possible Questions:**
@@ -147,7 +147,7 @@ Min Cut: S = {s, 1, 2}, T = {3, t}
 
 ### 4.4 Edmonds-Karp Algorithm
 
-- **Idea / 아이디어:** Ford-Fulkerson using BFS to find shortest augmenting path. / BFS로 최단 증가 경로를 찾는 Ford-Fulkerson.
+- **Idea:** Ford-Fulkerson using BFS to find shortest augmenting path. / BFS로 최단 증가 경로를 찾는 Ford-Fulkerson.
 - **Time Complexity / 시간 복잡도:** $\mathcal{O}(V E^2)$. / $\mathcal{O}(V E^2)$.
 - **Why better? / 왜 더 나은가?** Independent of flow value, always finds shortest path. 값과 무관하며 항상 최단 경로를 찾습니다.
 
@@ -191,7 +191,7 @@ Max Flow = 5 + 2 + 1 = 8
 
 ### 4.5 Dinic's Algorithm
 
-- **Idea / 아이디어:** Push flow along all shortest paths simultaneously using level graph. / 레벨 그래프를 사용하여 모든 최단 경로에 동시에 플로우 푸시.
+- **Idea:** Push flow along all shortest paths simultaneously using level graph. / 레벨 그래프를 사용하여 모든 최단 경로에 동시에 플로우 푸시.
 - **Level Graph / 레벨 그래프:** BFS assigns levels, only keep edges going to next level. / BFS로 레벨 할당, 다음 레벨로 가는 간선만 유지.
 - **Blocking Flow / 차단 유량:** Flow that saturates at least one edge in every path from s to t. / s에서 t로 가는 모든 경로에서 최소 하나의 간선을 포화시키는 유량.
 - **Time Complexity / 시간 복잡도:** 

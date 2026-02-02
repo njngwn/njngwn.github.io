@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Number Theory (정수론)'
+title: 'Number Theory'
 date: 2026-02-02 00:00 +0100
 categories: [Data Structures and Algorithms, Algorithms]
 tags: [algorithms, number-theory, gcd, euclidean, crt, modular-inverse, sieve]
@@ -13,7 +13,7 @@ math: true
 
 - **GCD (Greatest Common Divisor) / GCD (최대공약수):** $gcd(a,b) = \max\{k : k|a \land k|b\}$. / $gcd(a,b) = \max\{k : k|a \land k|b\}$.
 - **LCM (Least Common Multiple) / LCM (최소공배수):** $lcm(a,b) = \min\{k : a|k \land b|k\}$. / $lcm(a,b) = \min\{k : a|k \land b|k\}$.
-- **Property / 성질:** $gcd(a,b) \cdot lcm(a,b) = a \cdot b$. / $gcd(a,b) \cdot lcm(a,b) = a \cdot b$.
+- **Property:** $gcd(a,b) \cdot lcm(a,b) = a \cdot b$. / $gcd(a,b) \cdot lcm(a,b) = a \cdot b$.
 - **Euclidean Algorithm / 유클리드 알고리즘:** $gcd(a,b) = gcd(b, a \bmod b)$. / $gcd(a,b) = gcd(b, a \bmod b)$.
 - **Time Complexity / 시간 복잡도:** $\mathcal{O}(\log \min(a,b))$. / $\mathcal{O}(\log \min(a,b))$.
 
@@ -92,7 +92,7 @@ Check: 7 × 15 = 105 ≡ 1 (mod 26) ✓
 
 **Number Theory Algorithms Comparison / 정수론 알고리즘 비교:**
 
-| Algorithm / 알고리즘 | Problem / 문제 | Time Complexity / 시간 복잡도 | Space Complexity / 공간 복잡도 | Key Idea / 핵심 아이디어 |
+| Algorithm | Problem | Time Complexity | Space Complexity | Key Idea |
 |:---|:---|:---|:---|:---|
 | **Euclidean** | GCD(a,b) | $\mathcal{O}(\log \min(a,b))$ | $\mathcal{O}(1)$ | $gcd(a,b) = gcd(b, a \bmod b)$ |
 | **Extended Euclidean** | Modular inverse, Bézout coefficients / 모듈러 역원, 베주 계수 | $\mathcal{O}(\log \min(a,b))$ | $\mathcal{O}(1)$ | Back-substitution / 역대입 |
@@ -151,7 +151,7 @@ Check:
 
 **Binary Exponentiation / 이진 거듭제곱:**
 - Compute $x^n$ in $\mathcal{O}(\log n)$ multiplications. / $\mathcal{O}(\log n)$ 곱셈으로 $x^n$ 계산.
-- **Idea / 아이디어:** $x^n = \prod_{i} (x^{2^i})^{n_i}$ where $n_i$ are bits of $n$. / $x^n = \prod_{i} (x^{2^i})^{n_i}$ ($n_i$는 $n$의 비트).
+- **Idea:** $x^n = \prod_{i} (x^{2^i})^{n_i}$ where $n_i$ are bits of $n$. / $x^n = \prod_{i} (x^{2^i})^{n_i}$ ($n_i$는 $n$의 비트).
 
 **Visualization / 시각화:**
 

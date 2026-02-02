@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Binary Search & Union-Find (이진 탐색 & 유니온 파인드)'
+title: 'Binary Search & Union-Find'
 date: 2026-02-02 00:00 +0100
 categories: [Data Structures and Algorithms, Algorithms]
 tags: [algorithms, binary-search, union-find, data-structures]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Shortest Paths (최단 경로)'
+title: 'Shortest Paths'
 date: 2026-02-02 00:00 +0100
 categories: [Data Structures and Algorithms, Algorithms]
 tags: [algorithms, graph, shortest-path, dijkstra, bellman-ford, floyd-warshall, sssp, apsp]

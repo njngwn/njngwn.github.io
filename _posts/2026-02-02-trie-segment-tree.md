@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Trie & Segment Tree (트라이 & 세그먼트 트리)'
+title: 'Trie & Segment Tree'
 date: 2026-02-02 00:00 +0100
 categories: [Data Structures and Algorithms, Data Structures]
 tags: [data-structures, trie, segment-tree, lazy-propagation, range-query]
@@ -12,7 +12,7 @@ math: true
 ### 10.1 Trie
 
 - **Definition / 정의:** Tree structure for storing strings. / 문자열 저장을 위한 트리 구조.
-- **Properties / 성질:**
+- **Properties:**
   - Root represents empty string. / 루트는 빈 문자열.
   - Path from root to node represents prefix. / 루트에서 노드로의 경로는 접두사.
   - All descendants share same prefix. / 모든 후손은 같은 접두사 공유.
@@ -124,11 +124,11 @@ Query [1,4] (sum):
 ### 10.3 Lazy Propagation
 
 - **Purpose / 목적:** Efficient range updates. / 효율적인 구간 업데이트.
-- **Idea / 아이디어:** Store pending updates in `lazy` variable, propagate only when needed. / 대기 중인 업데이트를 `lazy` 변수에 저장, 필요할 때만 전파.
+- **Idea:** Store pending updates in `lazy` variable, propagate only when needed. / 대기 중인 업데이트를 `lazy` 변수에 저장, 필요할 때만 전파.
 - **Operations / 연산:**
   - **RangeAdd:** $\mathcal{O}(\log n)$ - mark lazy, don't update children immediately. / $\mathcal{O}(\log n)$ - lazy 표시, 자식 즉시 업데이트 안 함.
   - **Propagate:** $\mathcal{O}(1)$ - push lazy to children when querying. / $\mathcal{O}(1)$ - 쿼리 시 lazy를 자식에 전파.
-- **Key / 핵심:** Only propagate when node is actually accessed. / 노드가 실제로 접근될 때만 전파.
+- **Key:** Only propagate when node is actually accessed. / 노드가 실제로 접근될 때만 전파.
 
 **Visualization / 시각화:**
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Brute Force & Backtracking (브루트 포스 & 백트래킹)'
+title: 'Brute Force & Backtracking'
 date: 2026-02-02 00:00 +0100
 categories: [Data Structures and Algorithms, Algorithms]
 tags: [algorithms, brute-force, backtracking, branch-and-bound, meet-in-the-middle]
@@ -38,8 +38,8 @@ Example: Password brute force (without restrictions)
 
 ### 5.2 Backtracking
 
-- **Idea / 아이디어:** Construct candidates incrementally, abandon if cannot extend to valid solution. / 후보를 점진적으로 구성, 유효한 해로 확장 불가능하면 포기.
-- **Key Functions / 핵심 함수:**
+- **Idea:** Construct candidates incrementally, abandon if cannot extend to valid solution. / 후보를 점진적으로 구성, 유효한 해로 확장 불가능하면 포기.
+- **Key Functions:**
   - `valid(c)`: Check if partial solution $c$ violates constraints. / 부분 해 $c$가 제약을 위반하는지 확인.
   - `completed(c)`: Check if solution is complete. / 해가 완성되었는지 확인.
   - `next(c)`: Generate possible extensions. / 가능한 확장 생성.
@@ -144,7 +144,7 @@ If LB ≥ best_known_cost → prune this branch
 
 ### 5.4 Meet-in-the-Middle
 
-- **Idea / 아이디어:** Split search space in half, solve independently, combine results. / 검색 공간을 절반으로 나누어 독립적으로 해결 후 결과 결합.
+- **Idea:** Split search space in half, solve independently, combine results. / 검색 공간을 절반으로 나누어 독립적으로 해결 후 결과 결합.
 - **Complexity / 복잡도:** Time $O(2^n) \to O(2^{n/2})$, space increases. / 시간 $O(2^n) \to O(2^{n/2})$, 공간 증가.
 - **Example (Subset Sum) / 예시 (부분집합 합):** Split set $S$ into $A$ and $B$, generate all subset sums for each, check if $T - s_A$ exists in $B$'s sums. / 집합 $S$를 $A$와 $B$로 분할, 각각의 모든 부분집합 합 생성, $B$의 합에 $T - s_A$ 존재 여부 확인.
 

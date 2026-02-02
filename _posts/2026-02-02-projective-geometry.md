@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Projective Geometry (사영 기하학)'
+title: 'Projective Geometry'
 date: 2026-02-02 00:00 +0100
 categories: [Data Structures and Algorithms, Algorithms]
 tags: [algorithms, geometry, projective-geometry, homogeneous-coordinates, cross-product]
@@ -22,7 +22,7 @@ math: true
 
 - **Line through two points / 두 점을 지나는 직선:** $L = P_1 \times P_2$ (cross product). / $L = P_1 \times P_2$ (외적).
 - **Intersection of two lines / 두 직선의 교점:** $P = L_1 \times L_2$ (cross product). / $P = L_1 \times L_2$ (외적).
-- **Key Property / 핵심 성질:** Every two distinct lines intersect (even if parallel in Euclidean sense - intersection is point at infinity). / 모든 두 개의 서로 다른 직선은 교차 (유클리드에서 평행해도 - 교점은 무한원점).
+- **Key Property:** Every two distinct lines intersect (even if parallel in Euclidean sense - intersection is point at infinity). / 모든 두 개의 서로 다른 직선은 교차 (유클리드에서 평행해도 - 교점은 무한원점).
 
 **Visualization / 시각화:**
 

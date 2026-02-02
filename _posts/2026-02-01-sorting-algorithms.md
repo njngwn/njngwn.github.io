@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Sorting Algorithms (정렬 알고리즘)'
+title: 'Sorting Algorithms'
 date: 2026-02-01 00:00 +0100
 categories: [Data Structures and Algorithms, Algorithms]
 tags: [algorithms, sorting, quicksort, mergesort, heapsort, comparison-sort]

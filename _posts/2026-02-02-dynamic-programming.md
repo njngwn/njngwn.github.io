@@ -1,16 +1,18 @@
 ---
 layout: post
-title: 'Dynamic Programming (동적 계획법)'
+title: 'Dynamic Programming'
 date: 2026-02-02 00:00 +0100
 categories: [Data Structures and Algorithms, Algorithms]
 tags: [algorithms, dynamic-programming, dp, knapsack, lis, memoization]
 math: true
+---
+
 ## 7. Dynamic Programming (동적 계획법)
 
 ### 7.1 Basic Concept
 
-- **Idea / 아이디어:** Solve problem by solving overlapping subproblems, store results to avoid recomputation. / 겹치는 부분 문제를 해결하고 결과를 저장하여 재계산 방지.
-- **Key Properties / 핵심 성질:**
+- **Idea:** Solve problem by solving overlapping subproblems, store results to avoid recomputation. / 겹치는 부분 문제를 해결하고 결과를 저장하여 재계산 방지.
+- **Key Properties:**
   1. **Optimal Substructure / 최적 부분 구조:** Optimal solution contains optimal solutions to subproblems. / 최적 해가 부분 문제의 최적 해를 포함.
   2. **Overlapping Subproblems / 겹치는 부분 문제:** Same subproblems appear multiple times. / 같은 부분 문제가 여러 번 나타남.
 - **Approaches / 접근법:**
@@ -21,8 +23,8 @@ math: true
 
 | Aspect / 측면 | Top-Down / 하향식 | Bottom-Up / 상향식 |
 |:---|:---|:---|
-| **Implementation / 구현** | Recursive / 재귀 | Iterative / 반복 |
-| **Computation / 계산** | Only needed subproblems / 필요한 부분 문제만 | All smaller subproblems / 모든 작은 부분 문제 |
+| **Implementation** | Recursive / 재귀 | Iterative / 반복 |
+| **Computation** | Only needed subproblems / 필요한 부분 문제만 | All smaller subproblems / 모든 작은 부분 문제 |
 | **Cache Locality / 캐시 지역성** | Worse / 나쁨 | Better / 좋음 |
 | **Memory / 메모리** | Hash map (sparse) / 해시 맵 (희소) | Array (dense) / 배열 (밀집) |
 | **Best For / 최적 용도** | Sparse state space / 희소 상태 공간 | Dense state space / 밀집 상태 공간 |

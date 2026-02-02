@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Greedy & Approximation Algorithms (탐욕법 & 근사 알고리즘)'
+title: 'Greedy & Approximation Algorithms'
 date: 2026-02-02 00:00 +0100
 categories: [Data Structures and Algorithms, Algorithms]
 tags: [algorithms, greedy, approximation, interval-scheduling, change-making]

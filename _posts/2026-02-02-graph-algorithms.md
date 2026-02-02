@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Graph Algorithms (그래프 알고리즘)'
+title: 'Graph Algorithms'
 date: 2026-02-02 00:00 +0100
 categories: [Data Structures and Algorithms, Algorithms]
 tags: [algorithms, graph, dfs, bfs, topological-sort, mst, kruskal, prim]
@@ -102,7 +102,7 @@ Level 2: 4 5   6
 - **Library Hell (lib):** DFS is used to traverse the dependency graph. Starting from packages to keep, we mark all dependencies (direct and transitive) as required. Then we check if any package to remove is marked as required. (EN: DFS traverses dependency graph to find all transitive dependencies. KR: DFS가 의존성 그래프를 순회하여 모든 전이적 의존성을 찾습니다.)
 - **City Roads (cit):** DFS/BFS is used to check if the graph remains acyclic after assigning directions to undirected edges. We need to find a topological ordering or detect cycles. (EN: Graph traversal to verify acyclicity after direction assignment. KR: 방향 할당 후 비순환성을 확인하기 위한 그래프 순회.)
 
-**Implementation Example / 구현 예시:**
+**Implementation Example:**
 ```cpp
 // DFS (재귀) / DFS (Recursive)
 vector<bool> visited(n+1, false);
@@ -347,7 +347,7 @@ Final MST weight: 2+1+1+4+5 = 13
 
 **MST Algorithms Comparison / MST 알고리즘 비교:**
 
-| Algorithm / 알고리즘 | Time Complexity / 시간 복잡도 | Space Complexity / 공간 복잡도 | Best For / 최적 용도 | Key Data Structure / 핵심 자료구조 |
+| Algorithm | Time Complexity | Space Complexity | Best For | Key Data Structure |
 |:---|:---|:---|:---|:---|
 | **Kruskal** | $\mathcal{O}(|E| \log |E|)$ | $\mathcal{O}(|V|)$ | Sparse graphs ($|E| \approx |V|$) / 희소 그래프 | Union-Find, sorted edges / Union-Find, 정렬된 간선 |
 | **Prim (Binary Heap)** | $\mathcal{O}(|E| \log |V|)$ | $\mathcal{O}(|V|)$ | Sparse graphs / 희소 그래프 | Priority Queue / 우선순위 큐 |
@@ -359,7 +359,7 @@ Final MST weight: 2+1+1+4+5 = 13
 - **Prim (Fibonacci Heap):** $|V|$ extract-min: $\mathcal{O}(|V| \log |V|)$ + $|E|$ decrease-key: $\mathcal{O}(|E|)$ amortized / 평균적으로 더 빠름
 
 **When to Choose:**
-- **Kruskal:** Simpler implementation, good for sparse graphs, easier to understand. / 구현이 간단, 희소 그래프에 좋음, 이해하기 쉬움.
+- **Kruskal:** Simpler implementation, good for sparse graphs, easier to understand.
 - **Prim:** Better for dense graphs (with Fibonacci heap), maintains tree structure. / 밀집 그래프에 더 좋음 (피보나치 힙 사용), 트리 구조 유지.
 
 **Possible Questions:**
