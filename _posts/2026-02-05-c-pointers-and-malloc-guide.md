@@ -2,7 +2,7 @@
 layout: post
 title: "C언어 포인터 & malloc 완벽 가이드 — 포인터, 주소, 스레드, 메모리 관리"
 date: 2026-02-05 12:00:00 +0900
-categories: Operating Systems
+categories: [Computer Science, Operating Systems]
 tags: [C, 포인터, malloc, pthreads, 메모리관리, 운영체제]
 ---
 
