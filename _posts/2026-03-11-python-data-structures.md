@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[Python] 자료구조 완전 정리: List/Tuple/Dict/Set + 고급"
+title: "[Python] 자료구조 완전 정리: List/Tuple/Dict/Set"
 date: 2026-03-11 12:00 +0900
-categories: [Python]
+categories: [Programming Language, Python]
 tags: [python, 자료구조, list, tuple, dict, set, til]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "[OS] 세마포어(Semaphore)와 데드락(Deadlock) - 시험장용 완벽 정리"
 date: 2026-02-07 15:00:00 +0900
-categories: [Operating Systems, Synchronization]
+categories: [Computer Science, Operating Systems]
 tags: [semaphore, deadlock, mutex, synchronization, coffman conditions, 운영체제]
 math: true
 ---

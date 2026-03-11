@@ -1,7 +1,7 @@
 ---
 title: "[OS] 페트리 넷(Petri Net) 4가지 핵심 속성 - 그림으로 판별하기"
 date: 2026-02-07 16:00:00 +0900
-categories: [Operating Systems, Petri Net]
+categories: [Computer Science, Operating Systems]
 tags: [petri-net, deadlock, reachability, beschränktheit, verklemmungsfreiheit, lebendigkeit, fairness, 운영체제]
 math: true
 ---
