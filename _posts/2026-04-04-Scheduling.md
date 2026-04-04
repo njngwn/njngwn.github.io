@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scheduling
-date: 2025-10-21 14:28 +0200
+date: 2026-04-04 14:28 +0200
 categories: [Computer Science, Operating Systems]
 tags: [operating-systems, computer-science, scheduling, CFS]
 ---
