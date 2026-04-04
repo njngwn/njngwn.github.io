@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Naïve Bayes and Bayes Nets
-date: 2026-04-04 20:56 +0200
+title: Neural Networks
+date: 2026-04-04 21:07 +0200
 categories: [Computer Science, Machine Learning]
 tags: [machine-learning, computer-science]
 mermaid: true
 ---
 
-# Naïve Bayes
+# Neural Networks

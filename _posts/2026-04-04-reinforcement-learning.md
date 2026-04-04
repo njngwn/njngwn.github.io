@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Naïve Bayes and Bayes Nets
-date: 2026-04-04 20:56 +0200
+title: Reinforcement Learning
+date: 2026-04-04 21:08 +0200
 categories: [Computer Science, Machine Learning]
 tags: [machine-learning, computer-science]
 mermaid: true
 ---
 
-# Naïve Bayes
+# Reinforcement Learning
