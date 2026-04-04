@@ -6,3 +6,5 @@ categories: [Computer Science, Machine Learning]
 tags: [machine-learning, computer-science]
 mermaid: true
 ---
+
+# Ensemble Methods

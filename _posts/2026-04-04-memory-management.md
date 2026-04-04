@@ -6,10 +6,10 @@ categories: [Computer Science, Operating Systems]
 tags: [operating-systems, computer-science]
 ---
 
-# Memory Management (Speicherverwaltung)
-
 > 한정된 RAM을 어떻게 효율적으로 쪼개 쓰고, 부족할 때 HDD를 어떻게 빌려 쓰는지
 {: .prompt-tip }
+
+# Memory Management (Speicherverwaltung)
 
 - 과거에는 프로그램이 물리적 주소에 직접 접근(Direkte Adressierung)했으나, 이는 프로그램이 운영체제나 다른 프로그램의 메모리를 침범하여 시스템을 붕괴시킬 위험이 큼
 - 운영체제는 각 프로세스에게 0부터 시작하는 고유하고 독립적인 가상 주소 공간(Virtueller Adressraum)을 부여하여 프로세스를 서로 완벽히 격리함
