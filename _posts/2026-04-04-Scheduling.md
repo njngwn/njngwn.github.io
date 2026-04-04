@@ -4,6 +4,7 @@ title: Scheduling
 date: 2026-04-04 14:28 +0200
 categories: [Computer Science, Operating Systems]
 tags: [operating-systems, computer-science, scheduling, CFS]
+math: true
 ---
 
 # Scheduling
@@ -74,15 +75,21 @@ tags: [operating-systems, computer-science, scheduling, CFS]
 주기적으로 반복 실행되는 프로세스를 위한 선점형 스케줄링입니다. 주기가 짧을수록 (즉, 발생 빈도가 높을수록) 더 높은 우선순위를 정적으로 부여하여 일정 내 처리를 보장
 
 
-## 현대 운영체제와 멀티코어 환경의 스케줄링 확장
+## Linux-Scheduling
 
 스레드(Thread) 개념의 도입으로 현대 운영체제 커널(예: 리눅스)은 프로세스 단위가 아닌 커널 수준 스레드(Kernel-Level Threads) 단위로 스케줄링을 수행함
 
 ### CFS (Completely Fair Scheduler)
 
-고정된 시간 할당량이나 전통적인 우선순위 큐 대신, 프로세스의 가중치(Niceness 값)를 반영한 **가상 실행 시간(Virtual Runtime, vt)**을 계산
+- 모든 프로세스에 CPU 시간을 공평하게 나눠주는 것이 목표
 
-### Multicore Scheduling
+1. Virtual Runtime (vt): 프로세스가 실제로 CPU를 사용한 시간에 우선 순위(Weight)를 반영하여 계산한 수치 -> 이게 가장 작은 프로세스가 다음에 실행됨! $$vt_{new} = vt_{old} + \frac{1024}{w_{i}} \cdot (rt_{new} - rt_{old})$$
+2. Niceness: 프로세스의 niceness 값이 낮을수록 우선 순위가 높고 더 큰 weight을 가짐
+3. Targeted Latency (TL): 실행 대기 중인 모든 프로세스가 최소한 한 번씩은 CPU를 할당받아야 하는 전체 주기
+4. Time Slice (TS): 프로세스가 한 번에 최대 실행할 수 있는 시간. 전체 가용 시간 (TL)을 각 프로세스의 무게(weight) 비율로 나눠 가짐 $$TS_{i} = TL \cdot \frac{w_{i}}{\sum_{j=1}^{n} w_{j}}$$
+
+
+## Multicore Scheduling
 
 - 다중 코어 시스템에서 모든 코어가 하나의 전역 큐(Global Queue)를 공유하면 락(Lock) 경합으로 인한 병목 현상과 캐시 지역성(Cache Locality) 저하가 발생
 - 각 코어마다 **독립적인 로컬 큐(Local Queue)**를 두어 캐시 효율과 확장성을 높임
