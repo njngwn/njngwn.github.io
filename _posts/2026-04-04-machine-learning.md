@@ -10,33 +10,42 @@ mermaid: true
 # Machine Learning
 
 ```mermaid
-graph TD
-    %% 1단계: 입력 데이터 (Input)
+flowchart TD
+    %% 1. Input Layer
     subgraph Input_Layer [Input]
         I1[Data with Labels]
         I2[Data without Labels]
         I3[States and Actions]
     end
 
-    %% 2단계: 학습 방법 (Learning Methods) 및 피드백
+    %% 2. Learning Methods
     subgraph Learning_Process [Learning]
         SL[Supervised Learning]
         UL[Unsupervised Learning]
         RL[Reinforcement Learning]
         
-        %% 피드백 루프
-        SL -.->|Error| SL
-        RL -.->|Reward| RL
+        %% Self-loops (화살표 스타일 변경)
+        SL -- Error --> SL
+        RL -- Reward --> RL
     end
 
-    %% 3단계: 결과물 (Output)
+    %% 3. Output Layer
     subgraph Output_Layer [Output]
         O1[Mapping]
         O2[Classes]
         O3[Action]
     end
 
-    %% 4단계: 상세 분류 및 알고리즘 (Detailed Algorithms)
+    %% Connections Between Layers
+    I1 --> SL
+    I2 --> UL
+    I3 --> RL
+    
+    SL --> O1
+    UL --> O2
+    RL --> O3
+
+    %% 4. Detailed Algorithms
     subgraph SL_Details [Supervised Algorithms]
         O1 --> Reg[Regression]
         O1 --> Class[Classification]
@@ -71,13 +80,4 @@ graph TD
         O3 --> RL_MB[Model-based]
         O3 --> RL_MF[Model-free]
     end
-
-    %% 전체 연결
-    I1 --> SL
-    I2 --> UL
-    I3 --> RL
-    
-    SL --> O1
-    UL --> O2
-    RL --> O3
 ```
