@@ -12,9 +12,21 @@ tags: [operating-systems, computer-science, scheduling, CFS]
 
 시스템에는 일반적으로 처리할 수 있는 CPU 코어 수보다 훨씬 많은 프로세스가 존재하기 때문에, 운영체제는 프로세스를 실행(running), 대기(blocked), 준비(ready) 상태로 끊임없이 전이시키며 CPU를 번갈아 할당하는 멀티프로그래밍을 구현함
 
-- Dispatchcer: 프로세스 제어 블록(PCB)의 문맥(Context)를 저장하고 복원하는 실무적인 문맥 교환(Context Switch)을 담당
+### Scheduler
 
-- Scheduler: 준비 큐(Ready Queue)에 있는 프로세스 중 다음에 실행할 대상을 선택하는 전략적 결정을 내림
+- 실행 준비가 완료되어 대기 큐(Run Queue)에 모여 있는 프로세스들 중에서 다음에 CPU를 할당받을 프로세스를 선택
+- 시스템의 목적(처리량 극대화, 응답 시간 최소화 등)에 따라 FCFS, Round Robin, CFS 등 특정 스케줄링 알고리즘을 사용하여 어떤 프로세스에게 언제, 얼마 동안 CPU를 줄지 전략적인 결정을 내림 
+
+### Dispatcher 
+
+- 스케줄러가 다음 프로세스를 선택하면, 기존 프로세스의 실행을 멈추고 새 프로세스가 실행될 수 있도록 상태 전이와 문맥 교환(Context Switch)을 직접 실행
+
+- 작동 단계:
+1. 현재 실행 중인 프로세스/스레드에서 CPU를 회수하고, 상태를 '대기(blocked)'나 '준비(ready)' 상태로 변경
+2. 중단되는 프로세스의 현재 문맥(레지스터 값, 프로그램 카운터 등)을 해당 프로세스의 **PCB에 안전하게 저장(save)**
+3. 스케줄러가 선택한 새로운 프로세스의 PCB로부터 문맥 정보를 CPU로 불러옴(reload).
+4. 새로운 프로세스의 상태를 '실행 중(running)'으로 변경하고, 시스템을 유저 모드(User Mode)로 전환하여 제어권을 넘겨줌
+
 
 ## Batch Systems
 
