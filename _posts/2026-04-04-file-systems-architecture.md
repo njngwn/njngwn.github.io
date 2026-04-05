@@ -41,6 +41,17 @@ tags: [operating-systems, computer-science]
 
 #### ext
 
+| 구분 | ext2 | ext3 | ext4 |
+| :--- | :---: | :---: | :---: |
+| **핵심 컨셉** | 초기 표준 (기본형) | 안정성 강화 (+Journaling) | 성능 & 대용량 최적화 |
+| **저널링 (Journaling)** | 지원 안 함 | **지원 함** | **지원 함** |
+| **블록 관리 방식** | Block Mapping (i-node) | Block Mapping (i-node) | **Extents (범위 지정 방식)** |
+| **최대 파일 크기** | 2 TiB | 2 TiB | **16 TiB** |
+| **최대 볼륨 크기** | 32 TiB | 32 TiB | **1 EiB (약 100만 TiB)** |
+| **복구 속도 (fsck)** | 매우 느림 | 빠름 | **매우 빠름** |
+| **주요 특징** | 단순하고 가벼움 | 사고 시 데이터 유실 방지 | 파편화 방지 및 속도 향상 |
+
+![Backtracking-Image](/assets/img/operating-system/Ext2-inode.svg.png) _Source: Wikimedia Commons_
 
 ## 안정성과 성능 최적화
 
