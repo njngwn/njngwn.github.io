@@ -8,3 +8,4 @@ tags: [operating-systems, computer-science]
 
 # C Programming
 
+## 구조체
